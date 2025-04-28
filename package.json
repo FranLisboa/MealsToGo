@@ -17,8 +17,14 @@
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@react-native/eslint-config": "^0.79.1",
     "@types/react": "~18.3.12",
+    "eslint": "^8.57.1",
+    "prettier": "^3.5.3",
     "typescript": "^5.3.3"
   },
-  "private": true
+  "private": true,
+  "eslintConfig": {
+    "extends": "@react-native"
+  }
 }
