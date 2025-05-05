@@ -15,7 +15,15 @@ const RestaurantInfo: React.FC<RestaurantInfoProps> = ({ restaurant }) => {
           uri: restaurant.photos.at(0),
         }}
       />
-      <PaperText variant="titleLarge">Kermit</PaperText>
+      <PaperText style={styles.restaurantName} variant="titleLarge">
+        {restaurant.name}
+      </PaperText>
+      <PaperText style={{ fontFamily: "Lato_400Regular" }} variant="titleLarge">
+        {restaurant.name}
+      </PaperText>
+      <PaperText variant="titleLarge">
+        {restaurant.name}
+      </PaperText>
     </Card>
   );
 };
@@ -23,6 +31,9 @@ const RestaurantInfo: React.FC<RestaurantInfoProps> = ({ restaurant }) => {
 const styles = StyleSheet.create({
   container: {
     padding: 12,
+  },
+  restaurantName: {
+    fontFamily: "Oswald_400Regular",
   },
 });
 export default RestaurantInfo;
