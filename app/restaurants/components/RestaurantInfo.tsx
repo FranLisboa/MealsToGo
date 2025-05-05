@@ -1,7 +1,9 @@
 import React from "react";
 import { StyleSheet } from "react-native";
-import { Card, Text as PaperText } from "react-native-paper";
+import { Card } from "react-native-paper";
+import { Text } from "react-native"
 import Restaurant from "../models/Restaurant";
+import { fonts, fontWeights, fontSizes } from "../../../consts/fonts"
 
 interface RestaurantInfoProps {
   restaurant: Restaurant;
@@ -15,15 +17,12 @@ const RestaurantInfo: React.FC<RestaurantInfoProps> = ({ restaurant }) => {
           uri: restaurant.photos.at(0),
         }}
       />
-      <PaperText style={styles.restaurantName} variant="titleLarge">
+      <Text style={styles.restaurantName}>
         {restaurant.name}
-      </PaperText>
-      <PaperText style={{ fontFamily: "Lato_400Regular" }} variant="titleLarge">
-        {restaurant.name}
-      </PaperText>
-      <PaperText variant="titleLarge">
-        {restaurant.name}
-      </PaperText>
+      </Text>
+      <Text style={styles.restaurantAddress}>
+        {restaurant.addess}
+      </Text>
     </Card>
   );
 };
@@ -33,7 +32,13 @@ const styles = StyleSheet.create({
     padding: 12,
   },
   restaurantName: {
-    fontFamily: "Oswald_400Regular",
+    paddingTop: 12,
+    fontFamily: fonts.heading,
+    fontSize: fontSizes.body
+  },
+  restaurantAddress: {
+    fontFamily: fonts.body,
+    fontSize: fontSizes.caption
   },
 });
 export default RestaurantInfo;

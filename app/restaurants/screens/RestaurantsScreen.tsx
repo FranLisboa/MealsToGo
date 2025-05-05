@@ -33,6 +33,7 @@ const RestaurantsScreen: React.FC<{}> = ({}) => {
                 photos: [
                   "https://www.shutterstock.com/shutterstock/photos/2508403429/display_1500/stock-photo-kermit-the-frog-on-an-airport-2508403429.jpg",
                 ],
+                address: "Street",
               })
             }
           />
