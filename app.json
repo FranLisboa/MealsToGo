@@ -15,7 +15,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.franciscolisboa.MealsToGo"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -26,15 +27,21 @@
       [
         "expo-splash-screen",
         {
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#ff0000",
           "image": "./assets/splash-icon.png",
           "dark": {
-            "image": "./assets/splash-icon-dark.png",
-            "backgroundColor": "#000000"
+            "image": "./assets/splash-icon.png",
+            "backgroundColor": "#ff0000"
           },
           "imageWidth": 200
         }
       ]
-    ]
+    ],
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "3971785e-cf96-4002-9cfc-3471862d7dd3"
+      }
+    }
   }
 }
